@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  terrad-0:
+    image: terramoney/localterra-core:0.5.14
+    container_name: terra-0
+    pull_policy: always
+    volumes:
+      - ./localterra-0/config:/root/.terra/config
+    networks:
+      - terra-0
+    ports:
+      - "26657:26657"
+      - "1317:1317"
+      - "9090:9090"
+      - "9091:9091"
+    command: terrad start
+  terrad-1:
+    image: terramoney/localterra-core:0.5.14
+    container_name: terra-1
+    pull_policy: always
+    volumes:
+      - ./localterra-1/config:/root/.terra/config
+    networks:
+      - terra-1
+    ports:
+      - "26557:26657"
+      - "1307:1317"
+      - "9080:9090"
+      - "9081:9091"
+    command: terrad start
+networks:
+  terra-0:
+    driver: bridge
+  terra-1:
+    driver: bridge

@@ -19,4 +19,4 @@ We assume that you have `hermes` installed and the `--home` directory used is `~
 
 0. Copy hermes config file to your hermes directory (`make setup-hermes`) and add Terra keys to it, so that it can use them to submit IBC transactions to both chains: `make add-terra-keys`.
 1. Start Terra networks: `make start-terra-networks`
-2. In a separate terminal you can play with IBC. You can follow [this guide](https://hermes.informal.systems/tutorials/index.html).
+2. In a separate terminal you can play with IBC. You can follow [this guide](https://hermes.informal.systems/tutorials/index.html) but NOTE that our networks are called `localterra-0` and `localterra-1` rather than `ibc-0` and `ibc-1`.

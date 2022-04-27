@@ -161,3 +161,4 @@ In order to use previously generated Terra keys with hermes, follow the steps be
 3. Map Terra HEX key into `bech32`: `terrad keys parse <HEX key>`.
 5. Take bech32 version of public key (second from the top, prefix `terrapub`) and put into JSON file of the key under `pubkey` - effectively replacing original Terra PROTO format.
 6. Now, key is ready to be imported into hermes: `hermes keys add <chain-id> -f <key-name>.json -p "m/44'/330'/0'/0/0" --name "terra-0-user"`. The `-p` is BIP for Terra keys.
+
